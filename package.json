@@ -6,11 +6,8 @@
   "author": "alobato",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "private": true,
+  "private": false,
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "keywords": [
     "react",
     "components"
@@ -24,7 +21,8 @@
   ],
   "scripts": {
     "build": "tsup src/index.js --format esm,cjs --external react",
-    "dev": "tsup src/index.js --format esm,cjs --watch --external react"
+    "dev": "tsup src/index.js --format esm,cjs --watch --external react",
+    "publish": "yarn build && yarn publish"
   },
   "peerDependencies": {
     "react": "^18.1.0"
@@ -34,6 +32,7 @@
     "tsup": "^5.12.6"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@apollo/client": "3.5.9",
     "theme-ui": "^0.14.4"
