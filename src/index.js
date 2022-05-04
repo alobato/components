@@ -1,0 +1,5 @@
+export * from './Icons'
+export { default as Button } from './Button'
+export { default as InputSearch } from './InputSearch'
+export { default as Select } from './Select'
+export { default as OptimisticCheckbox } from './OptimisticCheckbox'

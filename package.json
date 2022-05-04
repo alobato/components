@@ -1,0 +1,41 @@
+{
+  "name": "@alobato/components",
+  "version": "1.0.0",
+  "description": "React components",
+  "repository": "github:alobato/components",
+  "author": "alobato",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "components"
+  ],
+  "bugs": {
+    "url": "https://github.com/alobato/components/issues"
+  },
+  "homepage": "https://github.com/alobato/components#readme",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup src/index.js --format esm,cjs --external react",
+    "dev": "tsup src/index.js --format esm,cjs --watch --external react"
+  },
+  "peerDependencies": {
+    "react": "^18.1.0"
+  },
+  "devDependencies": {
+    "react": "^18.1.0",
+    "tsup": "^5.12.6"
+  },
+  "dependencies": {
+    "@emotion/styled": "^11.8.1",
+    "@apollo/client": "3.5.9",
+    "theme-ui": "^0.14.4"
+  }
+}
