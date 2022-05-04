@@ -6,7 +6,9 @@
   "author": "alobato",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "keywords": [
     "react",
@@ -21,8 +23,7 @@
   ],
   "scripts": {
     "build": "tsup src/index.js --format esm,cjs --external react",
-    "dev": "tsup src/index.js --format esm,cjs --watch --external react",
-    "publish": "yarn build && yarn publish"
+    "dev": "tsup src/index.js --format esm,cjs --watch --external react"
   },
   "peerDependencies": {
     "react": "^18.1.0"
