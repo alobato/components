@@ -54,6 +54,7 @@ __export(src_exports, {
   Button: () => Button_default,
   Close: () => Close,
   GenericIcon: () => GenericIcon,
+  Input: () => Input_default,
   InputSearch: () => InputSearch_default,
   OptimisticCheckbox: () => OptimisticCheckbox_default,
   Select: () => Select_default
@@ -303,11 +304,41 @@ var StyledOptimisticCheckbox = (0, import_styled4.default)(OptimisticCheckbox)`
   }
 `;
 var OptimisticCheckbox_default = StyledOptimisticCheckbox;
+
+// src/Input.jsx
+var import_react8 = __toESM(require("react"));
+var import_styled5 = __toESM(require("@emotion/styled"));
+var Input = import_react8.default.forwardRef((_a, ref) => {
+  var _b = _a, { width, invalid } = _b, rest = __objRest(_b, ["width", "invalid"]);
+  return /* @__PURE__ */ import_react8.default.createElement("input", __spreadProps(__spreadValues({}, rest), {
+    ref
+  }));
+});
+var StyledInput = (0, import_styled5.default)(Input)`
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0.5em 0.8em;
+  color: inherit;
+  overflow: visible;
+  background: ${(props) => {
+  var _a, _b;
+  return ((_b = (_a = props == null ? void 0 : props.theme) == null ? void 0 : _a.colors) == null ? void 0 : _b.snow) || "#eee";
+}};
+  border: 1px solid ${(props) => {
+  var _a, _b;
+  return ((_b = (_a = props == null ? void 0 : props.theme) == null ? void 0 : _a.colors) == null ? void 0 : _b.hairline) || "#ccc";
+}};
+  ${(props) => (props == null ? void 0 : props.width) && `width: ${props.width};`}
+`;
+var Input_default = StyledInput;
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Button,
   Close,
   GenericIcon,
+  Input,
   InputSearch,
   OptimisticCheckbox,
   Select

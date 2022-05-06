@@ -273,10 +273,40 @@ var StyledOptimisticCheckbox = styled4(OptimisticCheckbox)`
   }
 `;
 var OptimisticCheckbox_default = StyledOptimisticCheckbox;
+
+// src/Input.jsx
+import React6 from "react";
+import styled5 from "@emotion/styled";
+var Input = React6.forwardRef((_a, ref) => {
+  var _b = _a, { width, invalid } = _b, rest = __objRest(_b, ["width", "invalid"]);
+  return /* @__PURE__ */ React6.createElement("input", __spreadProps(__spreadValues({}, rest), {
+    ref
+  }));
+});
+var StyledInput = styled5(Input)`
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0.5em 0.8em;
+  color: inherit;
+  overflow: visible;
+  background: ${(props) => {
+  var _a, _b;
+  return ((_b = (_a = props == null ? void 0 : props.theme) == null ? void 0 : _a.colors) == null ? void 0 : _b.snow) || "#eee";
+}};
+  border: 1px solid ${(props) => {
+  var _a, _b;
+  return ((_b = (_a = props == null ? void 0 : props.theme) == null ? void 0 : _a.colors) == null ? void 0 : _b.hairline) || "#ccc";
+}};
+  ${(props) => (props == null ? void 0 : props.width) && `width: ${props.width};`}
+`;
+var Input_default = StyledInput;
 export {
   Button_default as Button,
   Close,
   GenericIcon,
+  Input_default as Input,
   InputSearch_default as InputSearch,
   OptimisticCheckbox_default as OptimisticCheckbox,
   Select_default as Select
